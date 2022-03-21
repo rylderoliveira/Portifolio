@@ -87,6 +87,13 @@ img.icon {
     grid-template-rows: minmax(100px, auto) repeat(5, 100px);
 }
 
+@media screen and (max-width: 425px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 75px);
+        grid-template-rows: minmax(75px, auto) repeat(5, 75px);
+    }
+}
+
 .grid-container > button {
     cursor: pointer;
     font-size: 1rem;
