@@ -4,12 +4,20 @@
     padding: 0;
 }
 
+p {
+    font-size: 34px;
+}
+
 img.minhafoto {
     width: 30vw;
 }
 
 img.icon {
     width: 5vw;
+}
+
+img.project-image {
+    width: 25vw;
 }
 
 .about {
@@ -21,9 +29,11 @@ img.icon {
     display: flex;
 }
 
+.project-description {
+    align-self: center;
+}
+
 .project-number-start {
-    background-color:black;
-    color:white;
     font-weight: bold;
     width: 25vw;
     min-width: 25vw;
@@ -34,8 +44,6 @@ img.icon {
 }
 
 .project-number-end {
-    background-color:black;
-    color:white;
     font-weight: bold;
     width: 25vw;
     min-width: 25vw;
@@ -47,6 +55,13 @@ img.icon {
 
 .title {
     text-align: center;
+    font-size: 40px;
+}
+
+a.project-title {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
 }
 
 .contact {
@@ -70,6 +85,15 @@ img.icon {
     img.minhafoto {
         width: 100%;
     }
+
+    .project {
+        display: block;
+    }
+
+    .project-number-start, .project-number-end {
+
+}
+
 }
 
 .bg-calculator {
