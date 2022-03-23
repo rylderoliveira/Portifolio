@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('resume.urls')),
     path('calculator', include('calculator.urls')),
+    path('stopwatch', include('stopwatch.urls')),
 ]
