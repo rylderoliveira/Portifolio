@@ -4,5 +4,3 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'pages/index.html')
 
-def calculator(request):
-    return render(request, 'pages/calculator.html')
