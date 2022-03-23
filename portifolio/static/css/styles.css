@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+/* Este arquivo de estilos contem toda a estilização do meu projeto.
+A divisão dos grupos de estilos será feita por comentarios */
+
+/* 
+    Estilos da pagina de resume
+*/
 p {
     font-size: 34px;
 }
@@ -89,17 +95,16 @@ a.project-title {
     .project {
         display: block;
     }
-
-    .project-number-start, .project-number-end {
-
 }
 
-}
+/* 
+    Estilos da pagina calculator
+*/
 
 .bg-calculator {
     background: rgb(3,3,3);
     background: linear-gradient(117deg, rgba(3,3,3,1) 0%, #0d6efd 50%, rgba(0,0,0,1) 100%);
-    height: 93vh;
+    height: 94vh;
 }
 
 .grid-container {
@@ -167,4 +172,36 @@ a.project-title {
     color: white;
     font-size: 2rem;
     font-weight: bold;
+}
+
+/* 
+    Estilos da pagina stopwatch
+*/
+
+.stopwatch-container {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+}
+
+.stopwatch-container > .stopwatch-number {
+    font-size: 300px;
+    line-height: 112px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.stopwatch-container > .stopwatch-start {
+    width: 50vw;
+    height: 4rem;
+    background: #020078;
+    border-radius: 25px;
+    margin: 40px;
+
+    /* Letra */
+    font-size: 24px;
+    line-height: 28px;
+    color: white
 }

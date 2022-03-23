@@ -2,5 +2,10 @@
 {% load static %}
 {% block content %}
 {% include 'partials/_nav.html' %}
-<h1>Hello World</h1>
+<div class="bg-calculator">
+    <div class="stopwatch-container">
+        <div class="stopwatch-number">25:00</div>
+        <button type="button" class="stopwatch-start">Start</button>
+    </div>
+</div>
 {% endblock %}
