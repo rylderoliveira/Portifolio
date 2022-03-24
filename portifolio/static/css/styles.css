@@ -189,18 +189,18 @@ a.project-title {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #FFFFFF;
+    color: #c2c2c2;
 }
 
 .stopwatch-container > .stopwatch-start {
     width: 50vw;
     height: 4rem;
-    background: #020078;
     border-radius: 25px;
     margin: 40px;
+    border: none;
 
     /* Letra */
+    font-weight: 700;
     font-size: 24px;
-    line-height: 28px;
-    color: white
+    color: #c2c2c2
 }
