@@ -186,7 +186,6 @@ a.project-title {
 
 .stopwatch-container > .stopwatch-number {
     font-size: 300px;
-    line-height: 112px;
     display: flex;
     align-items: center;
     text-align: center;
