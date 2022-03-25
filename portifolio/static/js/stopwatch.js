@@ -1,42 +1,76 @@
 console.log("Hello World")  
 
-const startPauseButton = document.querySelector('[data-start]');
+const startPauseButton = document.querySelector('[data-start]')
+const resetButton = document.querySelector('[data-reset]')
+const presetButton = document.querySelector('[data-preset]');
 const textDiv = document.querySelector('[data-text]')
 
 class Stopwatch {
-    constructor(minutes, seconds) {
-        this.minutes = minutes
-        this.seconds = seconds
-        this.textDiv = `${this.minutes}:${this.seconds}`
+    constructor() {
+        this.updateDisplay()
+    }
 
-        this.time = this.minutes * 60 + this.seconds // Total time in seconds
+    updateDisplay() {
+
+        if (this.minutes < 10 && this.seconds < 10) {
+            this.textDiv = `0${this.minutes}:0${this.seconds}`
+        } else if (this.minutes < 10 && this.seconds > 10) {
+            this.textDiv = `0${this.minutes}:${this.seconds}`
+        } else if (this.minutes > 10 && this.seconds < 10) {
+            this.textDiv = `${this.minutes}:0${this.seconds}`
+        } else if (this.minutes > 10 && this.seconds > 10) {
+            this.textDiv = `${this.minutes}:${this.seconds}`
+        }
+
         textDiv.innerText = this.textDiv
+        console.log('rodou')
     }
 
     start() {
-        let clock = setInterval(() => {
-            const minutes = Math.floor(this.time/60)
-            const seconds = this.time % 60
-        
-            textDiv.innerText = `${minutes}:${seconds}`
-            this.time --
+        console.log('Deve começar')
+    }
 
-        }, 1000)
+    stop() {
+        console.log('Deve parar')
+    }
+
+    reset() {
+        this.minutes = 0
+        this.seconds = 0
+    }
+
+    preset() {
+
+        let timeInput = window.prompt('Set the initial timer:', '00:00')
+        
+        console.log(timeInput)
+        let listInput = timeInput.split(':')
+        this.minutes = parseFloat(listInput[0])
+        this.seconds = parseFloat(listInput[1])
+        console.log(this.seconds)
+        
     }
 
 }
 
-
-
-const stopwatch = new Stopwatch(0,10)
+const stopwatch = new Stopwatch()
 
 startPauseButton.addEventListener("click", () => {
     if (startPauseButton.innerText == "START") {
         stopwatch.start()
-        startPauseButton.innerText = "PAUSE"
-    } else if (startPauseButton.innerText == "PAUSE") {
-        // stopwatch.pause()
+        startPauseButton.innerText = "STOP"
+    } else if (startPauseButton.innerText == "STOP") {
+        stopwatch.stop()
         startPauseButton.innerText = "START"
     }
 })
 
+resetButton.addEventListener("click", () => {
+    stopwatch.reset()
+    stopwatch.updateDisplay()
+})
+
+presetButton.addEventListener("click", () => {
+    stopwatch.preset()
+    stopwatch.updateDisplay()
+})
