@@ -7,6 +7,9 @@ const textDiv = document.querySelector('[data-text]')
 
 class Stopwatch {
     constructor() {
+        this.minutes = 0
+        this.seconds = 0
+        this.isRunning = false
         this.updateDisplay()
     }
 
@@ -14,11 +17,11 @@ class Stopwatch {
 
         if (this.minutes < 10 && this.seconds < 10) {
             this.textDiv = `0${this.minutes}:0${this.seconds}`
-        } else if (this.minutes < 10 && this.seconds > 10) {
+        } else if (this.minutes < 10 && this.seconds >= 10) {
             this.textDiv = `0${this.minutes}:${this.seconds}`
-        } else if (this.minutes > 10 && this.seconds < 10) {
+        } else if (this.minutes >= 10 && this.seconds < 10) {
             this.textDiv = `${this.minutes}:0${this.seconds}`
-        } else if (this.minutes > 10 && this.seconds > 10) {
+        } else if (this.minutes >= 10 && this.seconds >= 10) {
             this.textDiv = `${this.minutes}:${this.seconds}`
         }
 
@@ -28,10 +31,28 @@ class Stopwatch {
 
     start() {
         console.log('Deve começar')
+        this.isRunning = true
+        
+        this.timer = setInterval(() => {
+            // Decrementa os minutos
+            if (this.seconds <= 0 && this.minutes > 0) {
+                this.seconds = 60
+                this.minutes --
+            }
+
+            if (this.seconds <= 0 && this.minutes <= 0 || this.isRunning == false) {
+                return
+            }
+
+            this.seconds --
+            this.updateDisplay()
+        }, 1000)
     }
 
     stop() {
         console.log('Deve parar')
+        this.isRunning = false
+        clearInterval(this.timer)
     }
 
     reset() {
@@ -47,7 +68,6 @@ class Stopwatch {
         let listInput = timeInput.split(':')
         this.minutes = parseFloat(listInput[0])
         this.seconds = parseFloat(listInput[1])
-        console.log(this.seconds)
         
     }
 
