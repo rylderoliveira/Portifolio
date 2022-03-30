@@ -2,5 +2,15 @@
 {% load static %}
 {% block content %}
 {% include 'partials/_nav.html' %}
-    <h1>Hello World</h1>
+    <div class="container-notes">
+        <form action="#" method="post">
+            <input type="text" name="note-text" id="note-text" title="note-text">
+            <button class="btn btn-success" type="submit">+</button>
+        </form>
+        <div class="notes-created">
+            <div class="note">
+                <h3>Essa é uma tarefa</h3>
+            </div>
+        </div>
+    </div>
 {% endblock %}
