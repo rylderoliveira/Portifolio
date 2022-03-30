@@ -2,15 +2,23 @@
 {% load static %}
 {% block content %}
 {% include 'partials/_nav.html' %}
-    <div class="container-notes">
-        <form action="#" method="post">
-            <input type="text" name="note-text" id="note-text" title="note-text">
+<div class="bg-calculator d-flex align-items-center justify-content-center">
+    <div class="container-notes d-flex flex-row bg-danger justify-content-evenly">
+        <form action="#" method="post" class="d-flex flex-column">
+            <label for="note-text" class="form-label">Titulo</label>
+            <input type="text" name="note-text" id="note-text">
+            <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             <button class="btn btn-success" type="submit">+</button>
         </form>
-        <div class="notes-created">
-            <div class="note">
+        <div class="notes-created bg-success">
+            <div class="note bg-info">
+                <h3>Essa é uma tarefa</h3>
+            </div>
+            <div class="note bg-info">
                 <h3>Essa é uma tarefa</h3>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
