@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('resume.urls')),
     path('calculator', include('calculator.urls')),
     path('stopwatch', include('stopwatch.urls')),
+    path('note', include('note.urls')),
 ]

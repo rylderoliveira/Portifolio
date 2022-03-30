@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'resume',
     'calculator',
-    'stopwatch'
+    'stopwatch',
+    'note'
 ]
 
 MIDDLEWARE = [
