@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+body {
+    background-color:rgb(20, 20, 20) !important
+}
+
 /* Este arquivo de estilos contem toda a estilização do meu projeto.
 A divisão dos grupos de estilos será feita por comentarios */
 
@@ -101,17 +105,11 @@ a.project-title {
     Estilos da pagina calculator
 */
 
-.bg-calculator {
-    background: rgb(3,3,3);
-    background: linear-gradient(117deg, rgba(3,3,3,1) 0%, #0d6efd 50%, rgba(0,0,0,1) 100%);
-    height: 94vh;
-}
-
 .grid-container {
     display: grid;
     justify-content: center;
     align-content: center;
-    min-height: 90vh;
+    min-height: 94vh;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(100px, auto) repeat(5, 100px);
 }
@@ -190,4 +188,37 @@ a.project-title {
     align-items: center;
     text-align: center;
     color: #c2c2c2;
+}
+
+/* Estilos da pagina notes */
+
+.note-form {
+    background-color: #f8f9fa;
+    height: 17rem;
+    min-width: 20rem;
+}
+
+.note {
+    background-color: #f8f9fa;
+    height: 17rem;
+    width: 20rem;
+    overflow-y: scroll;
+}
+
+@media screen and (max-width: 720px) {
+    .notes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .note-form {
+        background-color: #f8f9fa;
+        height: 17rem;
+        width: 20rem;
+    }
+
+    .notes-created {
+        justify-content: center;
+    }
+
 }

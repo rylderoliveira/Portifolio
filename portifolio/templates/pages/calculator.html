@@ -2,32 +2,32 @@
 {% load static %}
 {% block content %}
 {% include 'partials/_nav.html' %}
-<div class="bg-calculator">
-    <div class="grid-container">
-        <div class="output">
-            <div data-previous-operand class="previous-operation"></div>
-            <div data-current-operand class="current-number"></div>
-        </div>
-        <button data-all-clear class="span-two" type="button">C</button>
-        <button data-delete type="button">Apagar</button>  
-        <button data-operator class="operators" type="button">/</button> 
-        <button data-number type="button">7</button> 
-        <button data-number type="button">8</button> 
-        <button data-number type="button">9</button> 
-        <button data-operator class="operators" type="button">*</button>    
-        <button data-number type="button">4</button> 
-        <button data-number type="button">5</button> 
-        <button data-number type="button">6</button>
-        <button data-operator class="operators" type="button">-</button>  
-        <button data-number type="button">1</button> 
-        <button data-number type="button">2</button> 
-        <button data-number type="button">3</button>
-        <button data-operator class="operators" type="button">+</button>
-        <div style="background-color:rgb(24, 22, 22)"></div>
-        <button data-number type="button">0</button>   
-        <button data-number type="button">.</button>
-        <button data-equals class="span-two-row" type="button">=</button> 
+
+<div class="grid-container">
+    <div class="output">
+        <div data-previous-operand class="previous-operation"></div>
+        <div data-current-operand class="current-number"></div>
     </div>
+    <button data-all-clear class="span-two" type="button">C</button>
+    <button data-delete type="button">Apagar</button>  
+    <button data-operator class="operators" type="button">/</button> 
+    <button data-number type="button">7</button> 
+    <button data-number type="button">8</button> 
+    <button data-number type="button">9</button> 
+    <button data-operator class="operators" type="button">*</button>    
+    <button data-number type="button">4</button> 
+    <button data-number type="button">5</button> 
+    <button data-number type="button">6</button>
+    <button data-operator class="operators" type="button">-</button>  
+    <button data-number type="button">1</button> 
+    <button data-number type="button">2</button> 
+    <button data-number type="button">3</button>
+    <button data-operator class="operators" type="button">+</button>
+    <div style="background-color:rgb(24, 22, 22)"></div>
+    <button data-number type="button">0</button>   
+    <button data-number type="button">.</button>
+    <button data-equals class="span-two-row" type="button">=</button> 
 </div>
+
 <script src="{% static 'js/calculator.js' %}"></script>
 {% endblock %}
