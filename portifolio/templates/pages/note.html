@@ -6,9 +6,9 @@
     <form action="{% url 'createNote' %}" method="post" class="note-form d-flex flex-column m-3 p-3 rounded">
         {% csrf_token %}
         <label for="note-title" class="form-label">Titulo</label>
-        <input class="form-control" type="text" name="note-title" id="note-title" size="50">
+        <input class="form-control" type="text" name="note-title" id="note-title" size="50" required>
         <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="note-description" size="50"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="note-description" size="50" required></textarea>
         <button class="btn btn-success m-3" type="submit">Adicionar</button>
     </form>
     <div class="notes-created d-flex align-content-start flex-wrap">
