@@ -199,10 +199,17 @@ a.project-title {
 }
 
 .note {
-    background-color: #f8f9fa;
+    background-color: #feefc3;
     height: 17rem;
     width: 20rem;
     overflow-y: scroll;
+}
+
+.note-info {
+    background-color: #fec3c3;
+    height: 19rem;
+    width: 20rem;
+
 }
 
 @media screen and (max-width: 720px) {

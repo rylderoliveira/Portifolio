@@ -14,3 +14,8 @@ def createNote(request):
             note = Note.objects.create(title=title, description=description)
             note.save()
         return redirect('note')
+
+def deleteNote(request, pk):
+    note = Note.objects.get(id=pk)
+    note.delete()
+    return redirect('note')

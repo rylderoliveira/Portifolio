@@ -13,10 +13,13 @@
     </form>
     <div class="notes-created d-flex align-content-start flex-wrap">
         {% for note in notes %}
-        <div class="note m-3 p-3 rounded">
-            <h3>{{note.title}}</h3>
-            <hr>
-            <h5>{{note.description}}</h5>
+        <div class="note-info m-3 d-flex flex-column rounded">
+            <div class="note p-3">
+                <h3>{{note.title}}</h3>
+                <hr>
+                <h5>{{note.description}}</h5>
+            </div>
+            <a class="btn btn-danger" type="button" href="{% url 'deleteNote' note.id %}">Delete</a>
         </div>
         {% endfor %}
     </div>
